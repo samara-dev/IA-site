@@ -1,0 +1,291 @@
+/* ========== 1. CSS Variables & Global Styles ========== */
+:root {
+    --color-purple: #6C5CE7;
+    --color-teal: #00C9A7;
+    --color-cta: #FF7F50;
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #2d3436;
+    --color-bg-light: #FFFFFF;
+    --color-bg-grey: #f7f7f7;
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+    line-height: 1.6;
+}
+
+/* ========== 2. Typography ========== */
+h1, h2, h3, h4 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* ========== 3. Layout & Components ========== */
+section {
+    padding: 6rem 2rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-cta);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    border: 2px solid #eee;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-text-light);
+}
+
+
+/* ========== 4. Header & Navigation ========== */
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    z-index: 10;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+/* ========== 5. Section Styling ========== */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-purple), var(--color-teal));
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 10rem 2rem 6rem;
+}
+
+.hero-section h1 {
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section .subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1.5rem auto 2.5rem;
+    opacity: 0.9;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: var(--color-bg-grey);
+}
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 2rem;
+}
+.step h3 { margin: 1rem 0; }
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.feature-card {
+    background: var(--color-bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--color-bg-grey);
+}
+.testimonials-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.testimonial-card {
+    background: var(--color-bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    flex: 1;
+}
+.testimonial-card .author {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.author-img {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* Pricing Section */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.pricing-plan {
+    background: var(--color-bg-light);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    flex: 1;
+    max-width: 350px;
+    text-align: center;
+}
+.pricing-plan.popular {
+    transform: scale(1.05);
+    border: 2px solid var(--color-purple);
+}
+.pricing-plan h3 { font-size: 1.5rem; }
+.pricing-plan .price {
+    font-size: 2.5rem;
+    font-family: var(--font-primary);
+    margin: 1rem 0;
+}
+.pricing-plan ul {
+    list-style: none;
+    margin: 2rem 0;
+}
+.pricing-plan ul li { margin-bottom: 0.5rem; }
+
+/* FAQ Section */
+.faq-section {
+     background-color: var(--color-bg-grey);
+}
+.faq-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-answer p {
+    padding-bottom: 1.5rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    background: linear-gradient(135deg, var(--color-purple), var(--color-teal));
+    color: var(--color-text-light);
+    text-align: center;
+}
+.final-cta-section h2 { color: var(--color-text-light); }
+.final-cta-section .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ========== 6. Responsive Styles ========== */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    section { padding: 4rem 1rem; }
+
+    .steps-container,
+    .testimonials-container,
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
